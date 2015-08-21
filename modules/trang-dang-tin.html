@@ -1,0 +1,141 @@
+<style>
+	body{
+		background:#f5f5f5;
+	}
+</style>
+<div class="panel panel-default"  style="max-width:600px; margin: 0 auto; margin-bottom:30px; padding-bottom:30px; padding-top:20px; ">
+<div class="content-panel">
+
+	<section class="wrapper">
+<div class="form-panel">
+			  
+		      <form class="form-horizontal style-form form-signin" method="post" action="controller/themsanpham.php"
+              		 enctype="multipart/form-data" style="max-width:80%; margin: 0 auto" id="ajaxForm">
+               <h4 class="mb" style="color: #888 !important; text-align:center"><span class="glyphicon glyphicon-pencil"></span> 
+              	 <em style="color:#F00;font-weight:600"> ĐIỀN ĐẦY ĐỦ THÔNG TIN NHÉ </em></h4>
+				  <div class="form-group">
+					  <label class="col-sm-3 col-md-3 control-label">Họ Tên</label>
+					  <div class="col-sm-9">
+						  <input type="text" class="form-control" name="name_nd" required autofocus="" >
+					  </div>
+				  </div>
+				  <div class="form-group">
+					  <label class="col-sm-3 col-md-3 control-label">Email</label>
+					  <div class="col-sm-9">
+						  <input type="email" class="form-control" name="email" required="required">
+					  </div>
+				  </div>
+				  <div class="form-group">
+					  <label class="col-sm-3 col-sm-3 control-label">Số điện thoại</label>
+					  <div class="col-sm-9">
+						  <input type="text" class="form-control" name="phone" required autofocus="autofocus">                                  
+					  </div>
+				  </div> 		  
+                  <div class="well" style="background:#D3EDBA; margin-left:-16px;margin-right:-20px">
+                  
+                  <div class="form-group">
+					  
+					  	<label class="col-sm-3 col-sm-3 control-label"><strong>Tiêu đề tin rao</strong> </label>
+					 
+					  <div class="col-sm-9">
+						  <input type="text" class="form-control" name="name" required autofocus="autofocus" placeholder="Cần bán gì">                                  
+					  </div>
+				  </div>
+                   <div class="form-group">    
+						<label class="col-sm-3 col-sm-3 control-label"><strong>Danh mục</strong> </label>                          
+					  <div class="col-sm-9">
+												
+                      	<select class="form-control" id="danhmuc" name="danhmuc" required autofocus="autofocus">
+                            <option value="">Chọn danh mục</option>
+                            <option>Sách vở, tài liệu giấy</option>
+                            <option>Điện thoại, laptop, phụ kiện</option>
+                            <option>Đồ điện tử</option>
+                            <option>Sản phẩm tự chế</option>
+                            <option>Việc làm toàn thời gian/bán thời gian/đồ án/dự án</option>
+                            <option>Đồ thủ công</option>
+                            <option>Xe cộ</option> 
+                            <option>Nhà trọ, nhà bán</option>
+                            <option>Quần áo, giày dép,phụ kiện thời trang</option>
+                            <option>Đồ thể thao</option>
+                            <option>Dịch vụ sửa chữa</option>
+                            <option>Khác</option>                
+                         </select>
+                          </div>	                                  
+				</div> 
+                  <div class="form-group">
+					  
+					  	<label class="col-sm-3 col-sm-3 control-label" required ><strong>Giá cả (đồng)</strong> </label>
+					 
+					  <div class="col-sm-9">
+						  <input type="text" class="form-control" name="giaca" required autofocus="autofocus" placeholder="">                                  
+					  </div>
+				  </div>
+<div class="form-group">
+					  <label class="col-sm-3 col-sm-3 control-label"><strong> Khu vực </strong></label>
+					  <div class="col-sm-9">
+<select class="form-control" id="khuvuc" name="khuvuc"  required autofocus="" >
+								<option value="">Chọn khu vực giao hàng</option>
+								<option value="Đại học Bách Khoa">Đại học Bách Khoa</option>
+								<option value="Quận 1">Quận 1</option>
+        <option value="Quận 2">Quận 2</option>
+        <option value="Quận 3">Quận 3</option>
+        <option value="Quận 4">Quận 4</option>
+        <option value="Quận 5">Quận 5</option>
+        <option value="Quận 6">Quận 6</option> 
+        <option value="Quận 7">Quận 7</option>
+        <option value="Quận 8">Quận 8</option>
+        <option value="Quận 9">Quận 9</option>
+        <option value="Quận 10">Quận 10</option>
+        <option value="Quận 11">Quận 11</option>
+        <option value="Quận 12">Quận 12</option>
+        <option value="Quận Tân Bình">Quận Tân Bình</option>                              
+        <option value="Quận Gò Vấp">Quận Gò Vấp</option>               
+        <option value="Quận Thủ Đức">Quận Thủ Đức</option>
+        <option value="Quận Phú Nhuận">Quận Phú Nhuận</option>
+        <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>               
+        <option value="Quận Tân Phú">Quận Tân Phú</option>                              
+        <option value="Quận Bình Tân">Quận Bình Tân</option>
+        <option value="Huyện Củ Chi">Huyện Củ Chi</option> 
+	       <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
+        <option value="Huyện Bình Chánh">Huyện Bình Chánh</option>
+        <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
+        <option value="Huyện Cần Giờ">Huyện Cần Giờ</option>
+							  </select>
+					  </div>
+				  </div>
+<div class="form-group">
+					  <label class="col-sm-3 col-sm-3 control-label">Số lượng</label>
+					  <div class="col-sm-9">
+						  <input type="text" class="form-control" name="soluong" />                                
+					  </div>
+				  </div>
+<div class="form-group">
+					  <label class="col-sm-3 col-sm-3 control-label">Tình trạng</label>
+					  <div class="col-sm-9">
+						  <input type="text" class="form-control" name="tinhtrang" />                                
+					  </div>
+				  </div>
+				   <div class="form-group">
+					  <label class="col-sm-3 col-sm-3 control-label">Hình ảnh</label>
+                       <div class="col-sm-9">				  
+                      <p><input type="file" data-bfi-disabled name="hinh1"  required autofocus=""  id="hinh1"></p>
+                      <p><input type="file" data-bfi-disabled name="hinh2"  required autofocus=""  id="hinh2"></p>
+                      <p><input type="file" data-bfi-disabled name="hinh3"  autofocus=""  id="hinh1"></p>
+                      <p><input type="file" data-bfi-disabled name="hinh4"  autofocus=""  id="hinh1"></p>
+                         </div>
+				  </div> 
+				   <div class="form-group">
+					  <label class="col-sm-3 col-sm-3 control-label">Mô tả</label>
+					  <div class="col-sm-9">
+						  <textarea class="form-control" rows="4" id="mota" name="mota"></textarea>                                  
+					  </div>
+				  </div>
+                  </div>
+				  <button type="submit" name="themsanpham" class="btn btn-success btn-lg" id="dangtinBtn">Đăng tin</button>
+                  <button type="reset" class="btn btn-danger btn-lg pull-right">Điền lại</button>                                 
+			  </form>
+			</div>
+            </section>
+          
+</div>
+</div>
